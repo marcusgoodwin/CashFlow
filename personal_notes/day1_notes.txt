@@ -1,0 +1,36 @@
+2 groups: 
+mckay and marcus: seeds/css/images
+	- front end back end aspects
+
+handlebars
+
+build skeleton first
+	- html/css
+	- login forms
+	- env 
+	- all the boilerplate stuff 
+jump at issues as they come up
+	- volunteer for functionality  
+
+functionality: 
+	- hourly wage/total money = total monthly budget 
+	- subtract reoccuring expenses 
+
+- step 1: form
+	- category
+	- amount
+	- card/cash
+	- description
+	- merchant
+	- date 
+
+- step 2: Summary by Category
+	- table layout of each category
+
+- step 3: parse & display data 
+	- colored pie chart for each category + percentages
+
+user story: 
+AS A responsible individual
+I WANT to track my income and expenses 
+SO THAT I can gauge and be more aware of my financial spending habits 
