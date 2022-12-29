@@ -1,2 +1,0 @@
-- crash course on tailwind
-- crash course on handlebars
