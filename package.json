@@ -1,16 +1,27 @@
 {
+//<<<<<<< feature/html-skeleton
     "name": "cash-flow",
+=======
+    "name": "museum-paintings",
+//>>>>>>> main
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
     "scripts": {
+//<<<<<<< feature/html-skeleton
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node server.js",
         "seed": "node seeds/seeds.js"
+=======
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js",
+      "seed": "node seeds/index.js"
+//>>>>>>> main
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+//<<<<<<< feature/html-skeleton
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "express-handlebars": "^5.2.0",
@@ -22,3 +33,14 @@
         "tailwindcss": "^3.2.4"
     }
 }
+=======
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-handlebars": "^5.2.0",
+      "handlebars": "^4.7.6",
+      "mysql2": "^2.2.5",
+      "sequelize": "^6.3.5"
+    }
+  }
+  
+//>>>>>>> main
