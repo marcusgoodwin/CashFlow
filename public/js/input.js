@@ -1,25 +1,5 @@
-// let purchase_date = document.getElementById("purchase_date").value
-// let price = document.getElementById("price").value
-// let description = document.getElementById("description").value
-// let merchant = document.getElementById("merchant").value
-// let category = document.getElementById("category").value
-
-// document.getElementById("submit-form").addEventColumnener("click", addData);
-
-// function addData() {
-// let purchase_date = FormData.get(floating_price);
-// let price = FormData.get(floating_purchase_date);
-// let description = FormData.get(floating_description);
-// let merchant = FormData.get(floating_merchant);
-// let category = FormData.get(floating_category);
-//   console.log(purchase_date);
-//   console.log(price);
-//   console.log(description);
-//   console.log(merchant);
-//   console.log(category);
-//   console.log("IT WORKED!!!")
-// }cel
-
+    var x = 1;
+		var y = 0;
 
     var column1 = [];
 		var column2 = [];
@@ -27,11 +7,7 @@
 		var column4 = [];
     var column5 = [];
 
-		var x = 1;
-		var y = 0;
-
     function addData(){
-
 			var addRowX = document.getElementById('transactions_table');
 			var NewRow = addRowX.insertRow(x);
 
@@ -53,8 +29,8 @@
 			cell4.innerHTML = column4[y];
       cell5.innerHTML = column5[y];
 
-			n++;
 			x++;
+			y++;
 		}
 
 // purchase_date
