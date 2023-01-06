@@ -1,15 +1,21 @@
 <body>
     <h1 class="flex items-center justify-center text-6xl">Login</h1>
     <br>
+    <br>
     <div class="flex items-center justify-center">
     <form action="/login" method="POST">
     <form id="login-form">
-      <label for="username">Username:</label><br>
-      <input type="text" id="username" name="username"><br>
-      <label for="password">Password:</label><br>
-      <input type="password" id="password" name="password">
+      <div>
+      <input type="text" id="username" name="username" placeholder=" Username">
+      </div>
+      <br>
+      <div>
+      <input type="password" id="password" name="password" placeholder=" Password">
+      </div>
+      <br>
       <div class="flex flex-col items-center justify-center">
-      <a href="/" class="p-3 px-6 py-2 pt-2 mt-16 text-white rounded-full bg-slate-500" id="about-button">Submit</a>
+      <br>
+      <a href="/" class="p-3 px-6 py-2 pt-2 my-2 text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800" id="submit">Submit</a>
       </div>
     </form> 
   </div>
