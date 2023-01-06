@@ -1,6 +1,17 @@
-<html>
-    <div class="container">
-      <h1 class="pb-8 text-4xl font-bold text-center">$22,000</h1>
+<style>
+  table, th, td {
+  border: 1px solid white;
+}
+</style>
+    <br class="container">
+      <h1 class="pb-8 text-4xl font-bold text-center"><span id="month"></span> Budget</h1>
+      <h2 class="pb-8 text-4xl font-bold text-center">$2,500</h2>
+
+
+
+
+<script src="../js/input.js"></script>
+
 
 <div class="container">
 		<label for="purchase_date">Purchase Date</label>
@@ -14,9 +25,27 @@
 
 		<label for="merchant">merchant</label>
 		<input type="text" name="merchant" id="merchant">
-
-    <label for="category">category</label>
-		<input type="text" name="category" id="category">
+    
+     <label for="category">category</label>
+     <input list="category" name="category" id="category" />
+        <datalist id="category">
+          <option value="Housing">
+          <option value="Auto">
+          <option value="Food">
+          <option value="Utilities">
+          <option value="Clothing">
+          <option value="Medical">
+          <option value="Insurance">
+          <option value="Supplies">
+          <option value="Debt">
+          <option value="Retirement">
+          <option value="Education">
+          <option value="Savings">
+          <option value="Gifts/Donations">
+          <option value="Entertainment">
+          <option value="Other">
+        </datalist>
+    
 
 		<input type="button" name="button" id="submit-form" value="Submit" onclick="addData()" 
     
@@ -49,7 +78,10 @@
     </div>    
   </body>
 
-<script src="../js/input.js"></script>
+<script>
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-</html>
-
+const d = new Date();
+let name = month[d.getMonth()];
+document.getElementById("month").innerHTML = name;
+</script>
