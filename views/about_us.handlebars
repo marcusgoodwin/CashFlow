@@ -2,18 +2,40 @@
   <title>About Us</title>
 </head>
 
+<style>
+p {
+  font-size: large;
+  line-height: 1.6;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30em
+}
+
+section {
+  text-align: justify;
+}
+
+section:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+</style>
+
 <body>
   <form id="about_us-form">
   <h1 class="flex items-center justify-center text-6xl">About Us</h1>
   <br>
-  <div class="flex items-center justify-center">
+  <section>
   <p>Our finance website is the ultimate tool for organizing and managing your personal finances. With our easy-to-use interface, you can input your income, expenses, and other financial information, and then sort it into customizable categories to get a clear picture of your overall financial situation.</p>
-  </div>
-  <div class="flex items-center justify-center">
+  <br>
   <p>Whether you are looking to save for the future, pay off debt, or just handle your finances, our website has the tools and resources you need to succeed. Give it a try today and take control of your financial future!</p>
-  </div>
+  </section>
   </form>
 </body>
+
+<div class="flex flex-col items-center justify-center">
 <a href="/" class="p-3 px-6 py-2 pt-2 mt-16 text-white rounded-full bg-slate-500" id="about-button">Home</a>
+</div>
 
 <scrip src="/js/about_us.js"></scrip>

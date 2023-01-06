@@ -1,19 +1,23 @@
 <style>
   table, th, td {
-  border: 1px solid white;
+  border: 1px solid black;
+  background: white;
+  padding: 7px;
+}
+input, select {
+  width: 200px;
+  height: 25px;
+  margin: 2px;
 }
 </style>
+
     <br class="container">
       <h1 class="pb-8 text-4xl font-bold text-center"><span id="month"></span> Budget</h1>
       <h2 class="pb-8 text-4xl font-bold text-center">$2,500</h2>
 
-
-
-
 <script src="../js/input.js"></script>
 
-
-<div class="container">
+<div class="flex flex-col items-center justify-center" id="content">
 		<label for="purchase_date">Purchase Date</label>
 		<input type="date" name="purchase_date" id="purchase_date">
 
@@ -45,17 +49,17 @@
           <option value="Other">Other</option>
         </select>
     
-
+    <br>
 		<input type="button" name="button" id="submit-form" value="Submit" onclick="addData()" 
-    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
 
  <table id="transactions_table"class="mt-8">
   <tr class="text-2xl font-bold text-center">
-    <th>Purchase Date</th>
-    <th>Price</th>
-    <th>Description</th>
-    <th>Merchant</th>
-    <th>Category</th>
+    <th> Purchase Date </th>
+    <th> Price </th>
+    <th> Description </th>
+    <th> Merchant </th>
+    <th> Category </th>
   </tr>
   <tr>
     <td>January 2, 2023</td>
