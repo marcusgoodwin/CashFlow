@@ -1,11 +1,14 @@
-<div id="app-root" style="display: none">
-    <h1>This is Frontegg Integration in Vanilla Javascript </h1>
-    <div id="user-container">
-    </div>
-    <br/>
-    <a id="logout" fe-state="isAuthenticated"><button>Logout</button></a>
-    <button id="loginWithRedirect" fe-mode="hosted"  fe-state="!isAuthenticated">
-        Login With Redirect [HostedLogin]
-    </button>
-</div>
-<script src="/bundle.js"></script>
+<html>
+  <body>
+    <div class="flex items-center justify-center">
+    <h1>Login Form</h1>
+    <form action="/login" method="POST">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Submit">
+    </form> 
+  </body>
+  </div>
+</html>
