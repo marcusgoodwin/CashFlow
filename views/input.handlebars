@@ -1,57 +1,96 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="/path/to/tailwind.css" />
-    <script src="/path/to/handlebars.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="text-4xl font-bold text-center">{{largeNumber}}</h1>
-      <form>
-        <input type="text" placeholder="Item name" />
-        <input type="text" placeholder="Cost" />
-        <input type="text" placeholder="Merchant" />
-        <input type="text" placeholder="Category" />
-        <button type="submit">Submit</button>
-      </form>
-      <table>
+<style>
+  table, th, td {
+  border: 1px solid white;
+}
+</style>
+
+    <br class="container">
+      <h1 class="pb-8 text-4xl font-bold text-center"><span id="month"></span> Budget</h1>
+      <h2 class="pb-8 text-4xl font-bold text-center">$2,500</h2>
+
+
+
+<br class="items-center justify-center">
+  <div class="relative z-0 w-full mb-6 group">
+      <input type="date" name="floating_purchase_date" id="floating_purchase_date" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="floating_purchase_date" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Purchase Date</label>
+  </div>
+
+
+  <div class="relative z-0 w-full mb-6 group">
+      <input type="number" min="0.00" max="10000.00" step="0.01" name="floating_Price" id="floating_Price" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="floating_Price" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Price</label>
+  </div>
+
+    <div class="relative z-0 w-full mb-6 group">
+        <input type="text" name="floating_Description" id="floating_Description" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <label for="floating_Description" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Description</label>
+    </div>
+
+    <div class="relative z-0 w-full mb-6 group">
+        <input type="text" name="floating_merchant" id="floating_merchant" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" required />
+        <label for="floating_merchant" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Merchant</label>
+    </div>
+
+        <div class="relative z-0 w-full mb-6 group">
+        <input list="floating_category" name="floating_category" id="floating_category" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <input list="category" />
+        <datalist id="category">
+          <option value="Housing">
+          <option value="Auto">
+          <option value="Food">
+          <option value="Utilities">
+          <option value="Clothing">
+          <option value="Medical">
+          <option value="Insurance">
+          <option value="Supplies">
+          <option value="Debt">
+          <option value="Retirement">
+          <option value="Education">
+          <option value="Savings">
+          <option value="Gifts/Donations">
+          <option value="Entertainment">
+          <option value="Other">
+        </datalist>
+        
+        <label for="floating_merchant" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Category</label>
+    </div>
+    <div>
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+  </div>
+  </br>
+</form>
+ <table style="width:100%">
         <tr>
-          <th>Item</th>
-          <th>Cost</th>
+          <th>Purchase Date</th>
+          <th>Price</th>
+          <th>Description</th>
           <th>Merchant</th>
           <th>Category</th>
         </tr>
-        {{#each entries}}
-          <tr>
-            <td>{{item}}</td>
-            <td>{{cost}}</td>
-            <td>{{merchant}}</td>
-            <td>{{category}}</td>
-          </tr>
-        {{/each}}
+
+        {{!-- {{#each entries}} --}}
+        <tr>
+          <td>1/3/2023</td>
+         {{!-- <td>{{date}}</td> --}}
+          <td>$15</td>
+          {{!-- <td>{{price}}</td> --}}
+          <td>Socks</td>
+          {{!-- <td>{{description}}</td> --}}
+          <td>Stance</td>
+          {{!-- <td>{{merchant}}</td> --}}
+          <td>Clothing</td>
+          {{!-- <td>{{category}}</td> --}}
+        </tr>
+        {{!-- {{/each}} --}}
       </table>
     </div>
   </body>
-  <head>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart); function drawChart()
-       { var data = google.visualization.arrayToDataTable([
-        ['Spending', 'Amount per Category'],
-        ['Work', 11], 
-        ['Eat', 2], 
-        ['Commute', 2], 
-        ['Watch TV', 2],
-        ['Sleep', 7] ]); var options = { title: 'My Monthly Spending', pieHole:
-      0.4, }; var chart = new
-      google.visualization.PieChart(document.getElementById('donutchart'));
-      chart.draw(data, options); }
-    </script>
-  </head>
-  <body>
-    <div id="donutchart" style="width: 900px; height: 500px;"></div>
-  </body>
-</html>
+
+<script>
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const d = new Date();
+let name = month[d.getMonth()];
+document.getElementById("month").innerHTML = name;
+</script>
