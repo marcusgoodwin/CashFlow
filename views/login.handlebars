@@ -1,12 +1,17 @@
 <body>
     <h1 class="flex items-center justify-center text-6xl">Login</h1>
+    <div>
+    {{#if messages.error}}
+        <p class="error">{{messages.error}}</p>
+    {{/if}}
+    </div>  
     <br>
     <br>
     <div class="flex items-center justify-center">
     <form action="/login" method="POST">
     <form id="login-form">
       <div>
-      <input type="text" id="username" name="username" placeholder=" Username">
+      <input type="text" id="username" name="username" placeholder=" Email">
       </div>
       <br>
       <div>
@@ -15,7 +20,7 @@
       <br>
       <div class="flex flex-col items-center justify-center">
       <br>
-      <a href="/" class="p-3 px-6 py-2 pt-2 my-2 text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800" id="submit">Submit</a>
+      <a href="/input" class="p-3 px-6 py-2 pt-2 my-2 text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800" id="submit">Login</a>
       </div>
     </form> 
   </div>
