@@ -47,9 +47,12 @@ app.use(methodOverride('_method'))
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// right now this is not allowing us to go to the input page. I'm trying to figure out why the user (after signing up) isn't redirected to the input page once they login
+// IF YOU NEED THE INPUT PAGE TO WORK THEN COMMENT OUT THE APP.GET BELOW
 app.get('/input', checkAuthenticated, (req, res) => {
   res.render('input.handlebars', { name: req.user.name })
 })
+// COMMENT TO HERE OUT TO GET THE INPUT PAGE TO WORK
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
   res.render('login.handlebars')
