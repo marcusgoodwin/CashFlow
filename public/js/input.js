@@ -27,11 +27,24 @@
 			cell2.innerHTML = '$'+column2[y];
 			cell3.innerHTML = column3[y];
 			cell4.innerHTML = column4[y];
-      cell5.innerHTML = column5[y];
+    	cell5.innerHTML = column5[y];
 
 			x++;
 			y++;
 		}
+
+// I was trying to clear the input cells after the submit button was clicked
+
+// const btn = document.getElementById('btn');
+// btn.addEventListener('click', function handleClick(event) {
+//   event.preventDefault();
+//   const inputs = document.querySelectorAll('#purchase_date, #price, #description, #merchant, #category');
+//   inputs.forEach(input => {
+//     input.value = '';
+//   });
+// });
+
+		
 
 // purchase_date
 // price

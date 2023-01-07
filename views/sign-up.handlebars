@@ -1,0 +1,28 @@
+<body>
+    <h1 class="flex items-center justify-center text-6xl">Sign Up</h1>
+    <br>
+    <br>
+    <div class="flex items-center justify-center">
+    <form action="/sign-up" method="POST">
+    <form id="sign-up-form">
+      <div>
+      <input type="text" id="name" name="name" placeholder=" Name" required/>
+      </div>
+      <br>
+      <div>
+      <input type="email" id="email" name="email" placeholder=" Email" required/>
+      </div>
+      <br>
+      <div>
+      <input type="password" id="password" name="password" placeholder=" Password" required/>
+      </div>
+      <br>
+      <div class="flex flex-col items-center justify-center">
+      <button type="submit" class="p-3 px-6 py-2 pt-2 my-2 text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800" id="about-button">Submit</button>
+      <a href="/login" class="p-3 px-6 py-2 pt-2 my-2 text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800" id="about-button">Login</a>
+      </div>
+    </form>
+    </div>
+  </body>
+
+    <script src="/js/sign-up.js"></script>
