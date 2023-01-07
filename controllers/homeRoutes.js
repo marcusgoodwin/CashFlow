@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
 
 router.get("/about-us", async (req, res) => {
   try {
-    res.render("about_us");
+    res.render("about-us");
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -30,7 +30,7 @@ router.get("/login", async (req, res) => {
 
 router.get("/sign-up", async (req, res) => {
   try {
-    res.render("sign_up");
+    res.render("sign-up");
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

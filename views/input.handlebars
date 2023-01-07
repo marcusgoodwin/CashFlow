@@ -1,19 +1,22 @@
 <style>
   table, th, td {
-  border: 1px solid white;
+  border: 1px solid black;
+  background: white;
+  padding: 7px;
+}
+input, select {
+  width: 200px;
+  margin: 2px;
 }
 </style>
+
     <br class="container">
       <h1 class="pb-8 text-4xl font-bold text-center"><span id="month"></span> Budget</h1>
       <h2 class="pb-8 text-4xl font-bold text-center">$2,500</h2>
 
-
-
-
 <script src="../js/input.js"></script>
 
-
-<div class="container">
+<div class="flex flex-col items-center justify-center" id="content">
 		<label for="purchase_date">Purchase Date</label>
 		<input type="date" name="purchase_date" id="purchase_date">
 
@@ -45,35 +48,27 @@
           <option value="Other">Other</option>
         </select>
     
-
-		<input type="button" name="button" id="submit-form" value="Submit" onclick="addData()" 
-    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+    <br>
+    <br>
+		<input type="button" name="button" id="btn" value="Submit" onclick="addData()" 
+    class="p-3 px-6 py-2 pt-2 my-2 text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
 
  <table id="transactions_table"class="mt-8">
   <tr class="text-2xl font-bold text-center">
-    <th>Purchase Date</th>
-    <th>Price</th>
-    <th>Description</th>
-    <th>Merchant</th>
-    <th>Category</th>
-  </tr>
-  <tr>
-    <td>January 2, 2023</td>
-    <td>$145</td>
-    <td>Nike Blazers</td>
-    <td>Nike</td>
-    <td>Fashion</td>
-  </tr>
-  <tr>
-    <td>January 2, 2023</td>
-    <td>$250</td>
-    <td>Groceries</td>
-    <td>Harmons</td>
-    <td>Food</td>
+    <th> Purchase Date </th>
+    <th> Price </th>
+    <th> Description </th>
+    <th> Merchant </th>
+    <th> Category </th>
   </tr>
 </table>
     </div>    
   </body>
+  <div class="flex flex-col items-center justify-center">
+  <form action="/logout?_method=DELETE" method="POST">
+  <button type="submit" class="p-3 px-6 py-2 pt-2 mt-16 text-white rounded-full bg-slate-500">Log Out</button>
+  </form>
+  </div>
 
 <script>
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
