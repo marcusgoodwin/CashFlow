@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS user;
 DROP DATABASE IF EXISTS transactions_db;
 
 CREATE DATABASE transactions_db;
@@ -13,7 +14,7 @@ create table user(
 
 
 
-create table transactions(
+create table transactions_db(
     id int auto_increment primary key,
     item_name varchar(30),
     merchant_name varchar(30),
