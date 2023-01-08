@@ -28,7 +28,23 @@ function addData() {
   let cell4 = NewRow.insertCell(3);
   let cell5 = NewRow.insertCell(4);
 
-  let result = bigNumber - column2[y];
+  let mathResult = bigNumber - column2[y];
+
+  console.log('bigNumber ~>',bigNumber);
+  console.log('column2[y] ~>', column2[y]);
+  console.log('mathResult ~>', mathResult);
+  console.log('bigNumber - column2[y] = mathResult', bigNumber , '-', column2[y], '=', mathResult )
+
+let element = document.getElementById("big_number");
+
+element.classList.remove("text-red-500");
+element.classList.remove("text-green-500");
+
+  if (mathResult <= 0) {
+    element.classList.add("text-red-500");
+  } else {
+    element.classList.add("text-green-500");
+  }
 
 
   cell1.innerHTML = column1[y];
@@ -40,27 +56,31 @@ function addData() {
 
 
 
-  console.log('column2[y] ~>', column2[y])
-  console.log('bigNumber ~>',bigNumber);
+  // console.log('column2[y] ~>', column2[y])
+  // console.log('bigNumber ~>',bigNumber);
   
-  console.log('===========')
+  // console.log('===========')
 
-  console.log('typeof bigNumber ~>',typeof bigNumber)
-  console.log('typeof column2[y] ~>',typeof column2[y])
+  // console.log('typeof bigNumber ~>',typeof bigNumber)
+  // console.log('typeof column2[y] ~>',typeof column2[y])
 
-  console.log('bigNumber-column2[y] ~>', bigNumber - column2[y])
+  // console.log('bigNumber-column2[y] ~>', bigNumber - column2[y])
   
-  let resultString = '$' + result.toFixed(2);
+  let resultString = '$' + mathResult.toFixed(2);
   document.getElementById("big_number").innerHTML = resultString;
+  element.innerHTML = resultString;
 
 
-  console.log('column2[y] pt2 ~>', column2[y])
-  console.log('bigNumber pt2 ~>',bigNumber);
+
+  // console.log('column2[y] pt2 ~>', column2[y])
+  // console.log('bigNumber pt2 ~>',bigNumber);
+
+
 
   x++;
   y++;
 
-  
+
 }
 
 // I was trying to clear the input cells after the submit button was clicked
