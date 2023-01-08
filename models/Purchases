@@ -1,3 +1,5 @@
+const Sequelize = require('sequelize');
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -44,6 +46,8 @@ Purchases.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'project',
+      modelName: 'purchases',
     }
   );
+
+  module.exports = sequelize;
