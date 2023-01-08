@@ -37,7 +37,7 @@ app.set('view engine', 'handlebars');
 app.use(express.urlencoded({ extended: false }))
 app.use(flash())
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: 'super secret group of words',
   resave: false,
   saveUninitialized: false
 }))
