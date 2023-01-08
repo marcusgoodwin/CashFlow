@@ -46,6 +46,16 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(methodOverride("_method"));
+app.use(express.urlencoded({ extended: false }))
+app.use(flash())
+app.use(session({
+  secret: 'super secret group of words',
+  resave: false,
+  saveUninitialized: false
+}))
+app.use(passport.initialize())
+app.use(passport.session())
+app.use(methodOverride('_method'))
 
 app.use(express.static(path.join(__dirname, "public")));
 
