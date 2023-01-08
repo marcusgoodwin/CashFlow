@@ -13,11 +13,11 @@ function addData() {
   let NewRow = addRowX.insertRow(x);
   let bigNumberString = document.getElementById("big_number").innerHTML;
 
-  let bigNumber = parseInt(bigNumberString.replace('$', ''));
+  let bigNumber = parseFloat(bigNumberString.replace('$', ''));
 
 
   column1[y] = document.getElementById("purchase_date").value;
-  column2[y] = parseInt(document.getElementById("price").value);
+  column2[y] = parseFloat(document.getElementById("price").value);
   column3[y] = document.getElementById("description").value;
   column4[y] = document.getElementById("merchant").value;
   column5[y] = document.getElementById("category").value;
@@ -52,7 +52,6 @@ function addData() {
   
   let resultString = '$' + result.toFixed(2);
   document.getElementById("big_number").innerHTML = resultString;
-
 
 
   console.log('column2[y] pt2 ~>', column2[y])
