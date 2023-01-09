@@ -1,4 +1,3 @@
-
 const form = document.getElementById('sign-up-form');
 console.log(form);
 console.log(document);
@@ -8,26 +7,21 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
   // Get the form data
-  const formData = new FormData(form);
-  const name = formData.get('name');
-  const email = formData.get('email');
-  const password = formData.get('password');
-
-  // Create an object to hold the user's data
-  const user = {
-    name: name,
-    email: email,
-    password: password,
-  };
-
+  const name = document.querySelector('#name').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const password = document.querySelector('#password').value.trim();
+  // const budget = document.querySelector('#budget').value.trim();
   // Send the POST request to the API with the user data
   fetch('/apis/createUser', {
     method: 'POST',
-    body: JSON.stringify(user),
+    body: JSON.stringify({name, email, password}),
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     }
-  })
-
+  }).then(() => {
+    document.location.replace('/input');
+    }).catch((err) => {
+      console.log(err);
+    })
 });

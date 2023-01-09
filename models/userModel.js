@@ -23,7 +23,12 @@ User.init(
       },
       password: {
         type: DataTypes.STRING,
+        allowNull: false,
       },
+      // Budget: {
+      //   type: DataTypes.DECIMAL(30, 2),
+      //   allowNull: false,
+      // },
     },
     {
       sequelize,
