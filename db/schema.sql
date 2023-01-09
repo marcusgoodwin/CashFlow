@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS user;
-CREATE DATABASE user;
-USE user;
+-- DROP DATABASE IF EXISTS user;
+-- CREATE DATABASE user;
+-- USE user;
 
 DROP DATABASE IF EXISTS transactions_db;
 CREATE DATABASE transactions_db;
