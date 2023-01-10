@@ -10,7 +10,7 @@ An application called CashFlow which allows for a user to manage transactions wi
 
 
 ## Installation 
-The user can find the deployed app on [Heroku](link) 
+The user can find the deployed app on [Heroku](https://cashflow.herokuapp.com) 
 
 ## Usage
 
