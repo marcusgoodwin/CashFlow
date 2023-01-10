@@ -121,7 +121,6 @@ function checkNotAuthenticated(req, res, next) {
   next();
 }
 
-app.listen(process.env.PORT, '0.0.0.0');
 
 app.use(routes);
 
